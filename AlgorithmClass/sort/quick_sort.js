@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * 快速排序 的时间复杂度
  * 递归的时间复杂度是 O(logN)
@@ -31,5 +30,5 @@ Array.prototype.quickSort = function() {
   return this
 }
 
-const arr = [2,3,4,2,1]
-arr.quickSort()
+// const arr = [2,3,4,2,1]
+// arr.quickSort()

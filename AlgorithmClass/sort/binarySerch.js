@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * 二分查找
  * 时间复杂度: O(logN)
@@ -24,15 +23,5 @@ Array.prototype.binarySearch = function (target) {
   return -1
 }
 
-const res = [1, 2, 3, 4, 5].binarySearch(0)
-console.log(res)
-
-
-let mid = ((right - left) >> 1) + left;
-if (target <= nums[mid]) {
-  ans = mid;
-  right = mid - 1;
-} else {
-  left = mid + 1;
-}
-
+// const res = [1, 2, 3, 4, 5].binarySearch(0)
+// console.log(res)

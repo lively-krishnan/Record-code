@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * 归并排序 的时间复杂度
  * 分的时间复杂度是 O(logN)
@@ -35,6 +34,6 @@ Array.prototype.mergeSort = function () {
   return this
 }
 
-const arr = [2,3,1,23,21,56]
-const s = arr.mergeSort()
-console.log(s);
+// const arr = [2,3,1,23,21,56]
+// const s = arr.mergeSort()
+// console.log(s);
