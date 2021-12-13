@@ -1,0 +1,21 @@
+{
+  "name": "Record-code",
+  "version": "1.0.0",
+  "description": "记录日常代码学习",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitekarson/Record-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitekarson/Record-code/issues"
+  },
+  "homepage": "https://github.com/vitekarson/Record-code#readme"
+}
