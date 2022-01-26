@@ -16,7 +16,6 @@ function throttle(fn, dealy) {
   }
 }
 
-
 /**
  * 防抖
  * 短时间内多次操作，以最后次结果为准
@@ -25,9 +24,9 @@ function throttle(fn, dealy) {
 function debounce(fn, delay){
   let timer
   return (...args) => {
-    if(timer) {
-      clearTimeout(timer)
-    }
+    
+    timer &&  clearTimeout(timer)
+    
     timer = setTimeout(() => {
       fn.apply(this, args)
     }, delay)
