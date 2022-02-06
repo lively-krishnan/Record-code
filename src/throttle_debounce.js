@@ -1,6 +1,6 @@
 /**
  * 节流
- * 短时间内多次操作，只执行第一次调用
+ * 事件被触发，N秒之内只执行一次事件处理函数
  */
 
 function throttle(fn, dealy) {
@@ -18,17 +18,36 @@ function throttle(fn, dealy) {
 
 /**
  * 防抖
- * 短时间内多次操作，以最后次结果为准
+ * N秒内只要触发事件，就重新计时， 处理函数将永远不能执行
  */
-
-function debounce(fn, delay){
-  let timer
-  return (...args) => {
-    
+function debounce(fn, delay, immediate = false) {
+  let timer = null,
+  res;
+  const debounced = (...args) => {
     timer && clearTimeout(timer)
-    
-    timer = setTimeout(() => {
-      fn.apply(this, args)
-    }, delay)
+
+    if(immediate) {
+      const exec = !timer
+      timer = setTimeout(() => {
+        timer = null
+      }, delay);
+
+      if(exec) {
+        res = fn.apply(this, args)
+      }
+    }else {
+      timer = setTimeout(() => {
+        res = fn.apply(this, args)
+      }, delay);
+    }
+
+    return res
   }
+
+  debounced.remove = () => {
+    clearTimeout(timer)
+    timer = null
+  }
+
+  return debounced
 }
